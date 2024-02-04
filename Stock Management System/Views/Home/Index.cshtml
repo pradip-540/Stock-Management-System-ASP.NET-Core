@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+/*         background-image: url('your-background-image-url.jpg'); /* Replace with the URL of your background image */
+ */     
+        background-size: cover;
+        background-position: center;
+        color: white;
+        background-color: #808080;
+        
+    }
+    .btn
+    {
+        background-color:#000080;
+        color:white;
+    }
+    .btn:hover{
+           color:white;
+           background-color:blue;
+
+    }
+
+    .landing-content {
+        padding: 100px;
+        text-align: center;
+    }
+
+        .landing-content h1 {
+            font-size: 4em;
+        }
+
+        .landing-content p {
+            font-size: 1.5em;
+        }
+</style>
+
+<div class="landing-content">
+    <h1 class="display-4">Welcome</h1>
+    <h2>Store Stock or Inventory Management System designed for Global Businesses</h2>
+    <p>Product management, Manage orders. Track inventory. Handle suppliers. </p>
+    <p>|| One inventory management software to run all your inventory operations. ||</p>
+    <!-- Add additional content or calls to action as needed -->
+   
+    <p><button class="btn " asp-area="" asp-controller="" asp-action="">Sign-Up Free</button></p>
+</div>
+
+
+
