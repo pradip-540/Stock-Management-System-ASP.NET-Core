@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using Stock_Management_System.Controllers.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+builder.Services.AddDbContext<StockDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
+});
 
 var app = builder.Build();
 

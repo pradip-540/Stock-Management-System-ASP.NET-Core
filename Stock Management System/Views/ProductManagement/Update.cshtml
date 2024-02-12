@@ -1,0 +1,54 @@
+﻿@model Stock_Management_System.Models.View
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-auto" asp-area="" asp-action="ViewAll" asp-controller="ProductManagement">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-auto" asp-area="" asp-action="Update" asp-controller="ProductManagement">Update</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link mx-auto" asp-area="" asp-action="Add" asp-controller="ProductManagement">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-auto" asp-area="" asp-action="Remove" asp-controller="ProductManagement">Remove</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br />
+
+<form method="post">
+    <div class="container container-fluid">
+        <div class="row pb-3 text-align-center">
+            <h2 class="text-primary">Update Product</h2>
+            <hr />
+        </div>
+
+        <div class="row mb-3">
+            <label asp-for="Id">Id</label>
+            <input asp-for="Id"class="form-control" />  
+        <div class="row mb-3">
+            <label asp-for="Product"></label>
+            <input asp-for="Product" class="form-control" />
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Item"></label>
+            <input asp-for="Item" class="form-control" />
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Update Product</button>
+    </div>
+</form>
