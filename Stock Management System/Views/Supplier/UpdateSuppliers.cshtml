@@ -1,0 +1,71 @@
+﻿@model Stock_Management_System.Models.Supplier
+@{
+    ViewData["Title"] = "UpdateSuppliers";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="SuppliersData">Suppliers Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="AddSuppliers"> Add Suppliers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="UpdateSuppliers">Update Suppliers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="RemoveSuppliers">Remove Suppliers</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<form method="post">
+    <div class="container container-fluid" style="width: 50%;">
+
+
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label asp-for="Id" class="col-form-label"></label>
+            </div>
+
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label asp-for="Supplier_Name" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Supplier_Name" class="form-control" style="border-radius: 10px" />
+                <span asp-validation-for="Supplier_Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label asp-for="Product_Name" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Product_Name" class="form-control" style="border-radius: 10px" />
+                <span asp-validation-for="Product_Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label asp-for="Quantity" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Quantity" class="form-control" style="border-radius: 10px" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Update Supplier</button>
+        </div>
+    </div>
+</form>

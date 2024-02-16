@@ -12,6 +12,7 @@ namespace Stock_Management_System.Controllers.Data
 
         // DbSet properties for your entities
         public DbSet<View> ViewAllItems { get; set; }
+     
         // Add other DbSet properties for additional entities if needed
     }
 }

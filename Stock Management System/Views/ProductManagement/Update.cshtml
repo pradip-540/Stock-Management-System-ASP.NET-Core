@@ -5,22 +5,23 @@
     Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
 
-<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light">
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light ">
     <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link mx-auto" asp-area="" asp-action="ViewAll" asp-controller="ProductManagement">All</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-auto" asp-area="" asp-action="Update" asp-controller="ProductManagement">Update</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link mx-auto" asp-area="" asp-action="Add" asp-controller="ProductManagement">Add</a>
+                    <a class="nav-link mx-auto " style="width: 200px;" asp-area="" asp-action="ViewAll" asp-controller="ProductManagement">All</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-auto" asp-area="" asp-action="Remove" asp-controller="ProductManagement">Remove</a>
+                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Update" asp-controller="ProductManagement">Update</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Add" asp-controller="ProductManagement">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Remove" asp-controller="ProductManagement">Remove</a>
+                </li>
+                <!-- Add more navigation items as needed -->
             </ul>
         </div>
     </div>
@@ -28,27 +29,46 @@
 <br />
 
 <form method="post">
-    <div class="container container-fluid">
+    <div class="container container-fluid" style="width:50%">
         <div class="row pb-3 text-align-center">
-            <h2 class="text-primary">Update Product</h2>
+            <h2 class="text-primary text-center">Update Product</h2>
             <hr />
         </div>
 
         <div class="row mb-3">
-            <label asp-for="Id">Id</label>
-            <input asp-for="Id"class="form-control" />  
-        <div class="row mb-3">
-            <label asp-for="Product"></label>
-            <input asp-for="Product" class="form-control" />
+            <div class="col-sm-2">
+                <label asp-for="Id" class="col-form-label">Id</label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Id" class="form-control" />
+            </div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Item"></label>
-            <input asp-for="Item" class="form-control" />
+            <div class="col-sm-2">
+                <label asp-for="Product" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Product" class="form-control" />
+            </div>
         </div>
         <div class="row mb-3">
-            <label asp-for="Price"></label>
-            <input asp-for="Price" class="form-control" />
+            <div class="col-sm-2">
+                <label asp-for="Item" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Item" class="form-control" />
+            </div>
         </div>
-        <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Update Product</button>
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label asp-for="Price" class="col-form-label"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Price" class="form-control" />
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Update Product</button>
+        </div>
     </div>
 </form>
