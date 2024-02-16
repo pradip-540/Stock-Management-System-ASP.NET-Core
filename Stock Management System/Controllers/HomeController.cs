@@ -22,7 +22,11 @@ namespace Stock_Management_System.Controllers
         {
             return View();
         }
-        public IActionResult Privacy()
+        public IActionResult Pricing()
+        {
+            return View();
+        }
+        public IActionResult Customers()
         {
             return View();
         }

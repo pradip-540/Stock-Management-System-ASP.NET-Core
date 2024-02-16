@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<View>
+
 @{
     ViewData["Title"] = "ViewAll";
     Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
 
-<h1 style="text-align:center">Project Management</h1>
+<h1></h1>
 
 <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light ">
     <div class="container">
@@ -26,11 +27,12 @@
             </ul>
         </div>
     </div>
-</nav><br/>
+</nav>
+<br />
 
 
-<div class="container">
-    <table class="table">
+<div class="container text-center">
+    <table class="table " style="width:60%">
         <thead>
             <tr>
                 <th>Id</th>
@@ -41,7 +43,7 @@
         </thead>
         <!-- Add your table body here -->
     
-</div>
+
 
     <tbody>
         @foreach (var item in Model)
@@ -57,3 +59,10 @@
 
     </table>
 
+    <div class="btn">
+        <a class="btn btn-primary" style="width: 200px;"
+           asp-area="" asp-action="Purchase"
+           asp-controller="ProductManagement">Order Management</a>
+    </div>
+
+</div>
