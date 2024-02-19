@@ -3,6 +3,95 @@
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
+<style>
+    body {
+        background-size: cover;
+        background-position: center;
+        color: white;
+        background-color: #808080;
+    }
 
-<h1>Dashboard</h1>
+    .btn {
+        background-color: #535380;
+        color: white;
+        border-radius: 10%;
+    }
 
+        .btn:hover {
+            color: white;
+            background-color: blue;
+        }
+
+    .landing-content {
+        padding: 100px;
+        text-align: center;
+    }
+
+        .landing-content h1 {
+            font-size: 4em;
+        }
+
+        .landing-content p {
+            font-size: 1.5em;
+        }
+</style>
+<br />
+<br />
+<br />
+<br />
+@* Inventory Summary *@
+<div class="about-us" id="about">
+    <h2>Inventory Summary</h2>
+    <hr style="width: 100%; border-style: solid; border-width: 2px;" />
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3">Total Suppliers Count: **</div>
+            </div>
+            <div class="col">
+                <div class="p-3">Minimum Item: **</div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+@* Product Activity *@
+<div class="about-us" id="about">
+    <h2>Product Activity</h2>
+    <hr style="width: 100%; border-style: solid; border-width: 2px;" />
+    <div class="container text-center">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3">Recently added product: **</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3">Recently added product quantity: **</div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+@* Product Details *@
+<div class="about-us" id="about">
+    <h2>Product Details</h2>
+    <hr style="width: 100%; border-style: solid; border-width: 2px;" />
+    <div class="container text-center">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3">Total number of products: **</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3">Highest product in stock: **</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3">Best Seller: **</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3">Best selling product: **</div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
