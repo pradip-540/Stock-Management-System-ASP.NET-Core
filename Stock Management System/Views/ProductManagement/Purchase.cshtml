@@ -1,38 +1,29 @@
 ﻿@model Stock_Management_System.Models.View
+
 @{
-    ViewData["Title"] = "Add";
+    ViewData["Title"] = "Purchase";
     Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
 
-
-<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light ">
+<nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light bg-light">
     <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link mx-auto " style="width: 200px;" asp-area="" asp-action="ViewAll" asp-controller="ProductManagement">All</a>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="ProductManagement" asp-action="Purchase" >Buy Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Update" asp-controller="ProductManagement">Update</a>
+                    <a class="nav-link" asp-area="SellItems" asp-controller="ProductManagement" asp-action="SellManagement">Sell Items</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Add" asp-controller="ProductManagement">Add</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-auto" style="width: 200px;" asp-area="" asp-action="Remove" asp-controller="ProductManagement">Remove</a>
-                </li>
-                <!-- Add more navigation items as needed -->
             </ul>
         </div>
     </div>
 </nav>
-<br />
 
-                    
 <form method="post">
     <div class="container container-fluid" style="width: 50%;">
         <div class="row pb-3 text-align-center">
-            <h2 class="text-primary">Add Product</h2>
+            <h2 class="text-primary">Buy Product</h2>
             <hr />
         </div>
 
@@ -40,7 +31,7 @@
             <div class="col-sm-2">
                 <label asp-for="Id" class="col-form-label"></label>
             </div>
-           
+
         </div>
         <div class="row mb-3">
             <div class="col-sm-2">
@@ -67,7 +58,7 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Add Product</button>
+            <button class="btn" style="background-color:#000080; color: white; border-radius:10px" type="submit">Buy Product</button>
         </div>
     </div>
 </form>

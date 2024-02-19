@@ -7,10 +7,10 @@ using Stock_Management_System.Controllers.Data;
 
 #nullable disable
 
-namespace Stock_Management_System.Migrations
+namespace Stock_Management_System.Migrations.SupplierDb
 {
-    [DbContext(typeof(StockDbContext))]
-    partial class StockDbContextModelSnapshot : ModelSnapshot
+   
+    partial class SupplierDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Stock_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Stock_Management_System.Models.View", b =>
+            modelBuilder.Entity("Stock_Management_System.Models.Supplier", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,19 +29,20 @@ namespace Stock_Management_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Item")
+                    b.Property<string>("Product_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Product")
+                    b.Property<string>("Supplier_Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ViewAllItems");
+                    b.ToTable("Suppliers");
                 });
 #pragma warning restore 612, 618
         }

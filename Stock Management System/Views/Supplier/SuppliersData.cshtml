@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Supplier>
+@{
+    ViewData["Title"] = "SuppliersData";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<html>
+    <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"  style="">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="SuppliersData">Suppliers Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="AddSuppliers">Add Suppliers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="UpdateSuppliers">Update Suppliers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Supplier" asp-action="RemoveSuppliers">Remove Suppliers</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-4">
+    <h3 class="text-center mb-4">Suppliers Data</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover mx-auto" style="max-width: 80%">
+            <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Supplier Name</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Supplier_Name</td>
+                        <td>@item.Product_Name</td>
+                        <td>@item.Quantity</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" asp-action="UpdateSuppliers" asp-controller="Supplier" asp-route-id="@item.Id">Update</a>
+                            <a class="btn btn-danger btn-sm" asp-action="RemoveSuppliers" asp-controller="Supplier" asp-route-id="@item.Id">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

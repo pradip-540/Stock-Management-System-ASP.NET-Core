@@ -7,10 +7,10 @@ using Stock_Management_System.Controllers.Data;
 
 #nullable disable
 
-namespace Stock_Management_System.Migrations
+namespace Stock_Management_System.Migrations.OrderDb
 {
-    [DbContext(typeof(StockDbContext))]
-    partial class StockDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(OrderDbContext))]
+    partial class OrderDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Stock_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Stock_Management_System.Models.View", b =>
+            modelBuilder.Entity("Stock_Management_System.Models.SellItems", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,19 +29,29 @@ namespace Stock_Management_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Item")
+                    b.Property<int>("Address")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Product")
+                    b.Property<string>("Customer_Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Items")
+                        .HasColumnType("int");
+
+                    b.Property<long>("Phone_Number")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Product_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Product_Price")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("ViewAllItems");
+                    b.ToTable("SoldItems");
                 });
 #pragma warning restore 612, 618
         }
