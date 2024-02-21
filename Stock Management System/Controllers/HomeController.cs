@@ -17,7 +17,10 @@ namespace Stock_Management_System.Controllers
         {
             return View();
         }
-
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();

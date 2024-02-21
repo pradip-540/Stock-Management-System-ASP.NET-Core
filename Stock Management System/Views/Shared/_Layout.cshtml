@@ -47,21 +47,22 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                            @* in this navbar item when user click this it should redirect to the about id, which is present in the index div... *@
+                            <a class="nav-link text-light" href="#about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                            <a class="nav-link text-light" href="#pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Pricing">Customers</a>
+                          <a class="nav-link text-light" href="#customer">Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                      <a class="btn btn-secondary mx-2" asp-area="" asp-controller="Dashboard" asp-action="Dashboard">Log In</a>
-                        <a class="btn btn-success" asp-area="" asp-controller="" asp-action="">Get Now!</a>
+                        <a style="background-color: #535380; color:white; border-radius: 15%;" class="btn btn-secondary mx-2" asp-area="" asp-controller="Account" asp-action="Login">Log In</a>
+                        <a style="background-color: #535380; color:white; border-radius: 15%;" class="btn btn-success" asp-area="" asp-controller="Account" asp-action="Register">Get Now!</a>
                     </div>
                    
                 </div>
